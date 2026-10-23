@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Portfolio</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#111111;--ivory:#F5F0E9;--wine:#4A0F1C;--pink:#D6A5AE;--muted:#B7ADA5}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--ivory);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:90%;max-width:1080px;margin:auto}
+header{border-bottom:1px solid #333;position:sticky;top:0;background:#111;z-index:5}
+nav{display:flex;justify-content:space-between;align-items:center;min-height:72px;gap:12px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-1px}
+.logo span{color:var(--pink)}
+.links{display:flex;gap:18px;font-size:13px}
+.links a:hover{color:var(--pink)}
+section{padding:80px 0}
+.eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--pink);font-weight:bold}
+.hero{padding:100px 0}
+.hero-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:45px;align-items:center}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.08;letter-spacing:-2px;margin:20px 0}
+h1 em{color:var(--pink);font-style:normal}
+.intro,.muted{color:var(--muted);max-width:600px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{padding:12px 18px;border:1px solid var(--ivory);font-size:13px;font-weight:bold;display:inline-block}
+.btn.light{background:var(--ivory);color:var(--bg)}
+.hero-card{min-height:280px;padding:30px;background:linear-gradient(145deg,#54212D,#171717);border:1px solid #75414C;display:flex;flex-direction:column;justify-content:space-between}
+.big{font-size:58px;font-weight:bold;line-height:1.2}
+.heading{font-size:clamp(30px,4vw,44px);line-height:1.2;margin:12px 0 18px;letter-spacing:-1px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+.panel{border:1px solid #333;background:#171717;padding:24px}
+.panel h3{margin:12px 0;font-size:19px}
+.panel p{color:var(--muted);font-size:14px}
+.icon{font-size:25px;color:var(--pink)}
+#about{background:var(--ivory);color:var(--bg)}
+#about .eyebrow{color:var(--wine)}
+#about .muted{color:#625954}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.skills span{border:1px solid #ccc0b6;padding:6px 10px;font-size:12px}
+.art{min-height:180px;padding:20px;background:linear-gradient(140deg,#4A0F1C,#222);display:flex;flex-direction:column;justify-content:space-between}
+.art strong{font-size:25px;line-height:1.2}
+.project:nth-child(2) .art{background:linear-gradient(140deg,#D8C6B2,#76685E);color:#171717}
+.project:nth-child(3) .art{background:linear-gradient(140deg,#333B4A,#111)}
+.project-info{padding-top:18px}
+.tag{font-size:10px;color:var(--pink);letter-spacing:1px}
+#process .grid{grid-template-columns:repeat(4,1fr)}
+.step{border-top:1px solid #75414C;padding-top:15px}
+.step b{color:var(--pink);font-size:12px}
+.contact{border:1px solid #75414C;background:linear-gradient(130deg,#32151C,#171717);padding:38px}
+footer{border-top:1px solid #333;padding:25px 0;color:var(--muted);font-size:12px}
+.footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:700px){
+.links{gap:9px;font-size:11px}
+.logo{font-size:16px}
+.hero-grid,.about-grid{grid-template-columns:1fr}
+.hero{padding:70px 0}
+section{padding:60px 0}
+.grid,#process .grid{grid-template-columns:1fr}
+.contact{padding:25px}
+}
+</style>
+</head>
+<body>
+<header>
+<nav class="container">
+<a class="logo" href="#home">YOUR NAME<span>.</span></a>
+<div class="links">
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#work">Work</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Social Media Marketing · Content Strategy</div>
+<h1>Building brands through <em>meaningful content.</em></h1>
+<p class="intro">I focus on content planning, creative execution and organic social media support to help brands communicate with clarity and consistency.</p>
+<div class="buttons">
+<a class="btn light" href="#work">Explore My Work ↗</a>
+<a class="btn" href="#contact">Let's Connect</a>
+</div>
+</div>
+<div class="hero-card">
+<div class="eyebrow">My Approach</div>
+<div><div class="big">01—03</div><p>Strategy first. Purposeful content. Consistent execution.</p></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="eyebrow">What I Can Help With</div>
+<h2 class="heading">Services & Capabilities</h2>
+<p class="muted">A structured approach to a clear and consistent social media presence.</p>
+<div class="grid">
+<article class="panel"><div class="icon">↗</div><h3>Content Planning</h3><p>Content calendars, topic research, content pillars and platform-specific planning.</p></article>
+<article class="panel"><div class="icon">✳</div><h3>Content Creation</h3><p>Post concepts, captions, creative briefs and visual content for brand communication.</p></article>
+<article class="panel"><div class="icon">◎</div><h3>Organic Social Support</h3><p>Publishing support, profile consistency and basic performance tracking.</p></article>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container about-grid">
+<div><div class="eyebrow">About Me</div><h2 class="heading">Creative thinking.<br>Structured execution.</h2></div>
+<div><p class="muted">I am developing my skills in social media marketing, content strategy and digital communication. My focus is on understanding audiences, planning useful content and maintaining brand consistency.</p>
+<div class="skills"><span>Content Strategy</span><span>Content Calendars</span><span>Canva</span><span>Audience Research</span><span>Caption Writing</span><span>Basic Analytics</span></div>
+</div>
+</div>
+</section>
+
+<section id="work">
+<div class="container">
+<div class="eyebrow">Selected Projects</div>
+<h2 class="heading">Work that shows my thinking.</h2>
+<p class="muted">Practice concepts demonstrating planning, creative direction and brand communication.</p>
+<div class="grid">
+<article class="panel project"><div class="art"><small>PROJECT 01 · STRATEGY</small><strong>Content with a clear purpose.</strong></div><div class="project-info"><div class="tag">CONTENT PLANNING</div><h3>30-Day Content Plan</h3><p>A practice project covering content pillars, post ideas and a publishing schedule.</p></div></article>
+<article class="panel project"><div class="art"><small>PROJECT 02 · CREATIVE</small><strong>Consistency builds recognition.</strong></div><div class="project-info"><div class="tag">SOCIAL MEDIA DESIGN</div><h3>Brand Content Concepts</h3><p>A practice collection exploring visual hierarchy, messaging and brand identity.</p></div></article>
+<article class="panel project"><div class="art"><small>PROJECT 03 · RESEARCH</small><strong>Understand before you create.</strong></div><div class="project-info"><div class="tag">AUDIENCE RESEARCH</div><h3>Social Media Audit</h3><p>A practice exercise examining content formats and opportunities for improvement.</p></div></article>
+</div>
+<p class="muted" style="font-size:12px;margin-top:18px">These are practice-project concepts, not claims of completed client work. Replace them with your actual work.</p>
+</div>
+</section>
+
+<section id="process">
+<div class="container">
+<div class="eyebrow">My Workflow</div>
+<h2 class="heading">From research to execution.</h2>
+<div class="grid">
+<div class="step"><b>STEP 01</b><h3>Discover</h3><p class="muted">Understand the brand and audience.</p></div>
+<div class="step"><b>STEP 02</b><h3>Plan</h3><p class="muted">Create content themes and schedules.</p></div>
+<div class="step"><b>STEP 03</b><h3>Create</h3><p class="muted">Prepare copy and creative content.</p></div>
+<div class="step"><b>STEP 04</b><h3>Review</h3><p class="muted">Review available results and improve.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+<div class="contact">
+<div class="eyebrow">Have a Project in Mind?</div>
+<h2 class="heading">Let's create something meaningful.</h2>
+<p class="intro">Want to discuss a social media project? Connect with me on LinkedIn.</p>
+<div class="buttons"><a class="btn light" href="https://www.linkedin.com/" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+<p class="muted" style="font-size:12px;margin-top:12px">Replace the LinkedIn link with your own profile URL.</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="container footer-row"><span>© 2026 YOUR NAME · SMM PORTFOLIO</span><span>Built with purpose.</span></div></footer>
+</body>
+</html>
